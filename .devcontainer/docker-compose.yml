@@ -1,0 +1,8 @@
+version: '3'
+services:
+  dev-env:
+    image: wgmouton/base:latest
+    ports:
+    - "9000:9000"
+  couchdb:
+    image: couchdb:2.3.1

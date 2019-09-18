@@ -1,0 +1,7 @@
+{
+  "name": "Base test",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev-env",
+  "workspaceFolder": "/default/workspace/path/in/container/to/open",
+  "shutdownAction": "stopCompose"
+}
