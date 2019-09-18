@@ -27,8 +27,8 @@ RUN apt install -y \
 
 WORKDIR /root
 
-ADD configs/.zshrc .zshrc
-ADD configs/.vimrc .vimrc
+ADD ./configs/.zshrc .zshrc
+ADD ./configs/.vimrc .vimrc
 
 # Setup locale settings
 RUN locale-gen en_US.UTF-8
