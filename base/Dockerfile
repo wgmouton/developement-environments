@@ -30,7 +30,7 @@ RUN locale-gen en_US.UTF-8
 
 # Install Node Js
 RUN \
-  curl -sL https://deb.nodesource.com/setup_10.x | bash - &&\
+  curl -sL https://deb.nodesource.com/setup_12.x | bash - &&\
   apt update &&\
   apt install -y nodejs npm yarn 
 
