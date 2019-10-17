@@ -32,7 +32,7 @@ RUN locale-gen en_US.UTF-8
 RUN \
   curl -sL https://deb.nodesource.com/setup_12.x | bash - &&\
   apt update &&\
-  apt install -y nodejs npm yarn 
+  apt install -y nodejs yarn 
 
 # Install kubectl & Helm
 RUN \
