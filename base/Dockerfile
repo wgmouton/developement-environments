@@ -18,12 +18,7 @@ RUN apt install -y \
   vim \
   git \
   curl \
-  wget \
-  nodejs \
-  nodejs-dev \
-  node-gyp \
-  npm \
-  yarn 
+  wget 
 
 WORKDIR /root
 
@@ -32,6 +27,12 @@ ADD ./configs/.vimrc .vimrc
 
 # Setup locale settings
 RUN locale-gen en_US.UTF-8
+
+# Install Node Js
+RUN \
+  curl -sL https://deb.nodesource.com/setup_10.x | -E bash - &&\
+  apt update &&\
+  apt install -y nodejs nodejs-dev node-gyp npm yarn 
 
 # Install kubectl & Helm
 RUN \
